@@ -8,8 +8,29 @@
 <script type="text/babel">
 console.log(React, ReactDOM);
 
+function App(){
+    const data = {
+        imageUrl:"https://images.unsplash.com/photo-1717012455028-437f3223065a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        title:"Some Sample",
+        content:"Some content content content content content content content content...blablabla...",
+        linkText:"前往未知(?)",
+        link:"#"
+    }
+
+    return <div className="card">
+        <img src={data.imageUrl} className="card-img-top" alt="surprise! MTFK~"/>
+        <div className="card-body">
+            <h5 className="card-title">{data.title}</h5>
+            <p className="card-text">{data.content}</p>
+            <a href={data.link} className="btn btn-primary">{data.linkText}</a>
+        </div>
+    </div>
+}
 
 const el = document.getElementById('root');
+const root = ReactDOM.createRoot(el);
+root.render(<App/>);
+
 </script>
 
 <!-- 🙇🙇練習結束🙇🙇 -->
